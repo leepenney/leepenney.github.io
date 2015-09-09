@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Offend a Friend</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<h1>Offend a Friend</h1>
+<p>This site isn't about being offensive, it's about sending jokey put-downs to friends, please proceed with that in mind.</p>
+
+<ul class="insults-list">
+    <script id="insult-template" type="x-handlebars-template">
+        {{#each this}}
+            <li data-index="{{id}}">
+                <img src="{{images.small}}" alt="{{name}}">
+                <h3>{{ name }}</h3>
+            </li>
+        {{/each}}
+    </script>
+</ul>
+
+<script id="popup-template" type="x-handlebars-template">
+	<div id="popup-contents">
+		<h3>{{name}}</h3>
+		<img src="{{images.full}}" alt="{{name}}" />
+		<form id="send-insult" method="post" action="send_email.php">
+			<input type="hidden" name="insult_id" id="insult_id" value="{{id}}" />
+			<input type="hidden" name="insult_text" id="insult_text" value="{{name}}" />
+			<input type="hidden" name="image" id="image" value="{{images.full}}" />
+			<input type="text" name="name" id="name" placeholder="Your name" pattern=".{2,}" required />
+			<input type="email" name="email" id="email" placeholder="Your email address" required />
+			<input type="text" name="f_name" id="f_name" placeholder="Your friend's name" pattern=".{2,}" required />
+			<input type="email" name="f_email" id="f_email" placeholder="Your friend's email address" required />
+			<input type="submit" name="send" id="send" value="Insult them!" />
+		</form>
+		<span class="close">&times;</span>
+	</div> <!-- popup-contents -->
+</script>
+
+<script id="notification-template" type="x-handlebars-template">
+	<div id="notification">
+		<p>{{notification_text}}</p>
+		<button class="close">CLOSE</button>
+	</div>
+</script>
+
+<div id="insult-popup" class="overlay"></div> <!-- insult-popup -->
+
+<footer>&copy Lee Penney</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

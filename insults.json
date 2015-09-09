@@ -1,0 +1,114 @@
+[
+    {
+        "id": 101,
+        "name": "I've never seen such a loggerheaded, dizzy-eyed zounderkite in all my days",
+        "images": {
+            "full": "img/insult_101.png",
+            "small": "img/insult_101_sml.jpg"
+        }
+    },
+	{
+        "id": 102,
+        "name": "You really are a dizzy-eyed munz watcher",
+        "images": {
+            "full": "img/insult_102.png",
+            "small": "img/insult_102_sml.jpg"
+        }
+    },
+	{
+        "id": 103,
+        "name": "We're disappointed by what a scobberlotching mumper you are",
+        "images": {
+            "full": "img/insult_103.png",
+            "small": "img/insult_103_sml.jpg"
+        }
+    },
+	{
+        "id": 104,
+        "name": "Don't blame yourself, it's not your fault you're such a beef-witted lubberwort",
+        "images": {
+            "full": "img/insult_104.png",
+            "small": "img/insult_104_sml.jpg"
+        }
+    },
+	{
+        "id": 105,
+        "name": "I didn't think you could polish a turd, but apparently you can",
+        "images": {
+            "full": "img/insult_105.png",
+            "small": "img/insult_105_sml.jpg"
+        }
+    },
+	{
+        "id": 106,
+        "name": "If you think I look odd, try looking in a mirror, you're in for a shock",
+        "images": {
+            "full": "img/insult_106.png",
+            "small": "img/insult_106_sml.jpg"
+        }
+    },
+	{
+        "id": 107,
+        "name": "We salute a fellow pottle-dep scobberlotcher",
+        "images": {
+            "full": "img/insult_107.png",
+            "small": "img/insult_107_sml.jpg"
+        }
+    },
+	{
+        "id": 108,
+        "name": "Unlike this child, I don't consider you fit to shine my boots",
+        "images": {
+            "full": "img/insult_108.png",
+            "small": "img/insult_108_sml.jpg"
+        }
+    },
+	{
+        "id": 109,
+        "name": "You're such a limp-wristed, mother-loving, poodle-faker",
+        "images": {
+            "full": "img/insult_109.png",
+            "small": "img/insult_109_sml.jpg"
+        }
+    },
+	{
+        "id": 110,
+        "name": "You have the appearance of a goat worrier",
+        "images": {
+            "full": "img/insult_110.png",
+            "small": "img/insult_110_sml.jpg"
+        }
+    },
+	{
+        "id": 111,
+        "name": "This is class, you look like a clergyman's daughter",
+        "images": {
+            "full": "img/insult_111.png",
+            "small": "img/insult_111_sml.jpg"
+        }
+    },
+	{
+        "id": 112,
+        "name": "I wouldn't feed you to my hounds for fear you'd upset their digestion",
+        "images": {
+            "full": "img/insult_112.png",
+            "small": "img/insult_112_sml.jpg"
+        }
+    },
+	{
+        "id": 113,
+        "name": "We're of the opinion that you're a total donkey walloper",
+        "images": {
+            "full": "img/insult_113.png",
+            "small": "img/insult_113_sml.jpg"
+        }
+    },
+	{
+        "id": 114,
+        "name": "Your pungent odour would repulse a gong farmer",
+        "images": {
+            "full": "img/insult_114.png",
+            "small": "img/insult_114_sml.jpg"
+        }
+    }
+]
