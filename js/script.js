@@ -109,7 +109,7 @@ function send_insult(form) {
     }
     params = params.substring(1);
 	show_notification('Sending insult...');
-    req.open('get', 'http://mowp.net/tools/oaf/oaf_send_email.php?'+params, true);
+    req.open('get', 'http://mowp.net/tools/oaf/oaf_send_email_alt.php?'+params, true);
     //req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
     req.send(params);
     req.onreadystatechange=function(){
