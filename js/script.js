@@ -92,37 +92,22 @@ function render_popup(url) {
     });
 }
 
-function send_insult(form) {
-	/*var form_fields = form.elements;
-    var params = '';
-    for (var i=0; i<form_fields.length; i++) {
-		if (form_fields[i].type != 'submit') {
-			params += '&'+form_fields[i].name+'='+encodeURIComponent(form_fields[i].value);
-		}
-    }
-    params = params.substring(1);*/
-    var req = new XMLHttpRequest();
-	var form_fields = document.getElementById('send-insult').elements;
-    var params = '';
-    for (var i=0; i<form_fields.length; i++) {
-        params += '&'+form_fields[i].name+'='+encodeURIComponent(form_fields[i].value);
-    }
-    params = params.substring(1);
+async function send_insult(thisForm) {
 	show_notification('Sending insult...');
-    req.open('get', 'http://mowp.net/tools/oaf/oaf_send_email_alt.php?'+params, true);
-    //req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-    req.send(params);
-    req.onreadystatechange=function(){
-        if (req.readyState == 4 && req.status == 200) {
-			if (req.responseText == 'ok') {
-				console.log('send succeeded '+req.responseText);
-				show_notification('Yay, all sent. Consider your victim insulted.');
-			} else {
-				console.log('send failed '+req.responseText);
-				show_notification('Sorry, the interwebs are being a complete tard at the moment, so we were unable to send your insult');
-			}
-        }
-    }
+	const hookUrl = 'https://hooks.zapier.com/hooks/catch/2338087/bfsivv6/';
+	const formData = new FormData(thisForm);
+	const data = Object.fromEntries(formData);
+	let response = await fetch(hookUrl, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+
+    let result = await response.json();
+	if (result?.status == 'success') {
+		show_notification('Yay, all sent. Consider your victim insulted.');
+	} else {
+		show_notification('Sorry, the interwebs are being a complete tard at the moment, so we were unable to send your insult');
+	}
 }
 
 function show_notification(message_text) {
@@ -133,4 +118,3 @@ function show_notification(message_text) {
 }
 
 window.onload = render_page;
-
