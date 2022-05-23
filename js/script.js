@@ -62,7 +62,10 @@ function render_popup(url) {
 					var popup = document.getElementById('insult-popup');
 					var the_template_code = document.getElementById('popup-template').innerHTML;
 					var the_template = Handlebars.compile(the_template_code);
-					popup.innerHTML = the_template(insults_json[i]);
+					let insult_details = insults_json[i];
+					let domain = document.location.protocol + '//' + document.location.hostname + '/';
+					insult_details['domain'] = domain;
+					popup.innerHTML = the_template(insult_details);
 					popup.onclick = function(e) {
 						if (popup.style.display == 'block') {
 							var clicked = e.target;
@@ -97,8 +100,6 @@ async function send_insult(thisForm) {
 	const hookUrl = 'https://hooks.zapier.com/hooks/catch/2338087/bfsivv6/';
 	const formData = new FormData(thisForm);
 	const data = Object.fromEntries(formData);
-	data.insult_img = 'https://leepenney.github.io/' + data.insult_img;
-	data.insult_url = 'https://leepenney.github.io/#insult/' + data.insult_url;
 	let response = await fetch(hookUrl, {
       method: 'POST',
       body: JSON.stringify(data)
