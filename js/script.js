@@ -97,8 +97,8 @@ async function send_insult(thisForm) {
 	const hookUrl = 'https://hooks.zapier.com/hooks/catch/2338087/bfsivv6/';
 	const formData = new FormData(thisForm);
 	const data = Object.fromEntries(formData);
-	data?.insult_img = 'https://leepenney.github.io/' + data?.insult_img;
-	data?.insult_url = 'https://leepenney.github.io/#insult/' + data?.insult_url;
+	data.insult_img = 'https://leepenney.github.io/' + data.insult_img;
+	data.insult_url = 'https://leepenney.github.io/#insult/' + data.insult_url;
 	let response = await fetch(hookUrl, {
       method: 'POST',
       body: JSON.stringify(data)
