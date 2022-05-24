@@ -97,7 +97,7 @@ function render_popup(url) {
 
 async function send_insult(thisForm) {
 	show_notification('Sending insult...');
-	const hookUrl = 'https://hooks.zapier.com/hooks/catch/2338087/bfsivv6/';
+	const hookUrl = 'https://hooks.zapier.com/hooks/catch/2338087/bf8hky1/';
 	const formData = new FormData(thisForm);
 	const data = Object.fromEntries(formData);
 	let response = await fetch(hookUrl, {
