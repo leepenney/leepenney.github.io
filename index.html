@@ -33,9 +33,9 @@
 		<h3>{{name}}</h3>
 		<img src="{{images.full}}" alt="{{name}}" />
 		<form id="send-insult" method="post" action="">
-			<input type="hidden" name="insult_id" id="insult_id" value="{{id}}" />
+			<input type="hidden" name="insult_url" id="insult_url" value="{{ domain }}#insult/{{id}}" />
 			<input type="hidden" name="insult_text" id="insult_text" value="{{name}}" />
-			<input type="hidden" name="insult_img" id="insult_img" value="{{images.full}}" />
+			<input type="hidden" name="insult_img" id="insult_img" value="{{ domain }}{{images.full}}" />
 			<input type="text" name="from_name" id="from_name" placeholder="Your name" pattern=".{2,}" required />
 			<input type="email" name="from_email" id="from_email" placeholder="Your email address" required />
 			<input type="text" name="to_name" id="to_name" placeholder="Your friend's name" pattern=".{2,}" required />
